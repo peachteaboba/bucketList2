@@ -10,17 +10,27 @@
         <scene sceneID="ujD-Lk-lCU">
             <objects>
                 <tableViewController id="ZfK-9X-OXr" userLabel="Bucket List View Controller" customClass="BucketListViewController" customModule="bucketList2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ojp-Y7-7w4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ojp-Y7-7w4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCell" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="MyCell" id="0EL-04-9jo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCell" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="MyCell" textLabel="Q78-q3-lwY" style="IBUITableViewCellStyleDefault" id="0EL-04-9jo">
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0EL-04-9jo" id="oDX-5B-Gpe">
                                     <rect key="frame" x="0.0" y="0.0" width="533" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q78-q3-lwY">
+                                            <rect key="frame" x="15" y="0.0" width="518" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -30,15 +40,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bucket List" id="CFb-pD-9Q0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Nhl-Aj-6gN"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Nhl-Aj-6gN">
+                            <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cIi-bp-Fqf">
                             <connections>
-                                <segue destination="owB-YP-9iD" kind="presentation" identifier="AddNewMission" id="Hez-G8-AZV"/>
+                                <segue destination="owB-YP-9iD" kind="presentation" identifier="AddNewMission" modalTransitionStyle="coverVertical" id="Hez-G8-AZV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="owB-YP-9iD" kind="presentation" identifier="EditMission" id="uhB-gH-ru8"/>
+                        <segue destination="owB-YP-9iD" kind="presentation" identifier="EditMission" modalTransitionStyle="coverVertical" id="uhB-gH-ru8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHu-qg-tsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +138,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mPP-e9-DPJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="owB-YP-9iD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="owB-YP-9iD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nKB-3U-zUZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -143,6 +155,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uhB-gH-ru8"/>
+        <segue reference="Hez-G8-AZV"/>
     </inferredMetricsTieBreakers>
 </document>

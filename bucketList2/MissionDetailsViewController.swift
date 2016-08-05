@@ -22,21 +22,26 @@ class MissionDetailsViewController: UITableViewController {
     }
     
     @IBAction func doneBarButtonPressed(sender: UIBarButtonItem) {
-        // if we are editing then run the "didFinishEditingMission" method
-        if var mission = missionToEdit {
+        
+        if (newMissionTextField.text != "") {
+            // if we are editing then run the "didFinishEditingMission" method
+            if var mission = missionToEdit {
             
-            mission = newMissionTextField.text!
-            delegate?.missionDetailsViewController(self, didFinishEditingMission: mission, atIndexPath: missionToEditIndexPath!)
-        } else { // we are adding so run the "didFinishAddingMission" method
-            let mission = newMissionTextField.text!
-            delegate?.missionDetailsViewController(self, didFinishAddingMission: mission)
+                mission = newMissionTextField.text!
+                delegate?.missionDetailsViewController(self, didFinishEditingMission: mission, atIndexPath: missionToEditIndexPath!)
+            } else { // we are adding so run the "didFinishAddingMission" method
+                let mission = newMissionTextField.text!
+                delegate?.missionDetailsViewController(self, didFinishAddingMission: mission)
+            }
+        
         }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.newMissionTextField.becomeFirstResponder()
         
         if (missionToEdit != nil){
             newMissionTextField.text = missionToEdit

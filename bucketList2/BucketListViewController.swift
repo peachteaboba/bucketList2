@@ -10,7 +10,7 @@ import UIKit
 
 class BucketListViewController: UITableViewController, CancelButtonDelegate, MissionDetailsViewControllerDelegate {
 
-    var missions = ["Becoming a Pokemon Master", "Build Ironman Suit", "Eat more veggies"]
+    var missions = ["Become Pokemon Master", "Build Ironman Suit", "Hack Evil Corp."]
     
     
     override func viewDidLoad() {
@@ -85,6 +85,9 @@ class BucketListViewController: UITableViewController, CancelButtonDelegate, Mis
         
         // reload the table view
         tableView.reloadData()
+        
+        self.editing = false
+       
     }
     
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
@@ -100,8 +103,6 @@ class BucketListViewController: UITableViewController, CancelButtonDelegate, Mis
         self.tableView.reloadData()
         
     }
-    
-    
     
 
 }
