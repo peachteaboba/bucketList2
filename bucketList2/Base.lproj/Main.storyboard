@@ -10,16 +10,16 @@
         <scene sceneID="ujD-Lk-lCU">
             <objects>
                 <tableViewController id="ZfK-9X-OXr" userLabel="Bucket List View Controller" customClass="BucketListViewController" customModule="bucketList2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ojp-Y7-7w4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ojp-Y7-7w4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCell" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="MyCell" id="0EL-04-9jo">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0EL-04-9jo" id="oDX-5B-Gpe">
-                                    <rect key="frame" x="0.0" y="0.0" width="533" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="533" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -30,6 +30,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bucket List" id="CFb-pD-9Q0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Nhl-Aj-6gN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cIi-bp-Fqf">
                             <connections>
                                 <segue destination="owB-YP-9iD" kind="presentation" identifier="AddNewMission" id="Hez-G8-AZV"/>

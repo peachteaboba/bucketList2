@@ -10,12 +10,17 @@ import UIKit
 
 class BucketListViewController: UITableViewController, CancelButtonDelegate, MissionDetailsViewControllerDelegate {
 
-    var missions = ["Sky diving", "Live in Hawaii"]
+    var missions = ["Becoming a Pokemon Master", "Build Ironman Suit", "Eat more veggies"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        // *This will set the left bar button to toggle "Edit Mode"
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,7 +91,15 @@ class BucketListViewController: UITableViewController, CancelButtonDelegate, Mis
         performSegueWithIdentifier("EditMission", sender: tableView.cellForRowAtIndexPath(indexPath))
     }
     
-    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let movedObject = self.missions[sourceIndexPath.row]
+        missions.removeAtIndex(sourceIndexPath.row)
+        missions.insert(movedObject, atIndex: destinationIndexPath.row)
+        NSLog("%@", "\(sourceIndexPath.row) => \(destinationIndexPath.row) \(missions)")
+        
+        self.tableView.reloadData()
+        
+    }
     
     
     
