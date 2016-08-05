@@ -13,7 +13,7 @@ class MissionDetailsViewController: UITableViewController {
     weak var delegate: MissionDetailsViewControllerDelegate?
     
     
-    var missionToEdit: String?
+    var missionToEdit: Mission?
     var missionToEditIndexPath: Int?
     
     @IBOutlet weak var newMissionTextField: UITextField!
@@ -25,10 +25,10 @@ class MissionDetailsViewController: UITableViewController {
         
         if (newMissionTextField.text != "") {
             // if we are editing then run the "didFinishEditingMission" method
-            if var mission = missionToEdit {
+            if let mission = missionToEdit {
             
-                mission = newMissionTextField.text!
-                delegate?.missionDetailsViewController(self, didFinishEditingMission: mission, atIndexPath: missionToEditIndexPath!)
+                mission.details = newMissionTextField.text!
+                delegate?.missionDetailsViewController(self, didFinishEditingMission: mission)
             } else { // we are adding so run the "didFinishAddingMission" method
                 let mission = newMissionTextField.text!
                 delegate?.missionDetailsViewController(self, didFinishAddingMission: mission)
@@ -44,7 +44,7 @@ class MissionDetailsViewController: UITableViewController {
         self.newMissionTextField.becomeFirstResponder()
         
         if (missionToEdit != nil){
-            newMissionTextField.text = missionToEdit
+            newMissionTextField.text = missionToEdit?.details
         }
     }
     

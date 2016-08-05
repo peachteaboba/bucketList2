@@ -12,6 +12,9 @@
 		933F48711D53E61A00B96F16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933F486F1D53E61A00B96F16 /* Main.storyboard */; };
 		933F48731D53E61A00B96F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933F48721D53E61A00B96F16 /* Assets.xcassets */; };
 		933F48761D53E61A00B96F16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933F48741D53E61A00B96F16 /* LaunchScreen.storyboard */; };
+		9362AF9C1D54FA50009A2807 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9362AF9A1D54FA50009A2807 /* BucketList.xcdatamodeld */; };
+		9362AF9F1D55045D009A2807 /* Mission+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362AF9D1D55045D009A2807 /* Mission+CoreDataProperties.swift */; };
+		9362AFA01D55045D009A2807 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362AF9E1D55045D009A2807 /* Mission.swift */; };
 		936E4BF61D53EF6800EA9EE5 /* MissionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E4BF51D53EF6800EA9EE5 /* MissionDetailsViewController.swift */; };
 		936E4BF81D53F1FB00EA9EE5 /* CancelButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E4BF71D53F1FB00EA9EE5 /* CancelButtonDelegate.swift */; };
 		936E4BFA1D53F47E00EA9EE5 /* MissionDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E4BF91D53F47E00EA9EE5 /* MissionDetailsViewControllerDelegate.swift */; };
@@ -25,6 +28,9 @@
 		933F48721D53E61A00B96F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		933F48751D53E61A00B96F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		933F48771D53E61A00B96F16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9362AF9B1D54FA50009A2807 /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
+		9362AF9D1D55045D009A2807 /* Mission+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mission+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9362AF9E1D55045D009A2807 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		936E4BF51D53EF6800EA9EE5 /* MissionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionDetailsViewController.swift; sourceTree = "<group>"; };
 		936E4BF71D53F1FB00EA9EE5 /* CancelButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButtonDelegate.swift; sourceTree = "<group>"; };
 		936E4BF91D53F47E00EA9EE5 /* MissionDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,8 @@
 		933F485F1D53E61A00B96F16 = {
 			isa = PBXGroup;
 			children = (
+				9362AF9D1D55045D009A2807 /* Mission+CoreDataProperties.swift */,
+				9362AF9E1D55045D009A2807 /* Mission.swift */,
 				933F486A1D53E61A00B96F16 /* bucketList2 */,
 				933F48691D53E61A00B96F16 /* Products */,
 			);
@@ -61,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				933F486B1D53E61A00B96F16 /* AppDelegate.swift */,
+				9362AF9A1D54FA50009A2807 /* BucketList.xcdatamodeld */,
 				933F486D1D53E61A00B96F16 /* BucketListViewController.swift */,
 				933F486F1D53E61A00B96F16 /* Main.storyboard */,
 				933F48721D53E61A00B96F16 /* Assets.xcassets */,
@@ -146,10 +155,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				933F486E1D53E61A00B96F16 /* BucketListViewController.swift in Sources */,
+				9362AF9C1D54FA50009A2807 /* BucketList.xcdatamodeld in Sources */,
+				9362AFA01D55045D009A2807 /* Mission.swift in Sources */,
 				936E4BFA1D53F47E00EA9EE5 /* MissionDetailsViewControllerDelegate.swift in Sources */,
 				936E4BF61D53EF6800EA9EE5 /* MissionDetailsViewController.swift in Sources */,
 				936E4BF81D53F1FB00EA9EE5 /* CancelButtonDelegate.swift in Sources */,
 				933F486C1D53E61A00B96F16 /* AppDelegate.swift in Sources */,
+				9362AF9F1D55045D009A2807 /* Mission+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +316,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9362AF9A1D54FA50009A2807 /* BucketList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9362AF9B1D54FA50009A2807 /* BucketList.xcdatamodel */,
+			);
+			currentVersion = 9362AF9B1D54FA50009A2807 /* BucketList.xcdatamodel */;
+			path = BucketList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 933F48601D53E61A00B96F16 /* Project object */;
 }
